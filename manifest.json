@@ -1,6 +1,11 @@
 {
   "name": "Anti Bi",
   "version": "1.0",
-  "description": "This extension targets Bilibili and maximizes the fonts so that the website is hard to use",
-  "manifest_version": 2
+  "description": "This extension targets Bilibili and constantly sends warning",
+  "manifest_version": 2,
+  "permissions": ["*://*.bilibili.com/*"],
+  "content_scripts": [{
+    "matches": ["*://*.bilibili.com/*"],
+    "js": ["warning.js"]
+  }]
 }
